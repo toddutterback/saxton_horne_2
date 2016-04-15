@@ -1,9 +1,10 @@
 class SourcesController < ApplicationController
+
   def index
-    #TODO: Implement me
+    @sources = Source.by_name.page(params[:page]).per(10)
   end
 
   def show
-    #TODO: Implement me
+    @source = Source.find(params[:id])
   end
 end

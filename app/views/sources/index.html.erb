@@ -1,0 +1,11 @@
+<h3>Quote Sources</h3>
+
+<% @sources.each do |source| %>
+  <div class="row">
+    <div class="small-9 small-centered columns">
+      <h5><%= link_to source.name, source_path(source) %></h5>
+    </div>
+  </div>
+  <hr>
+<% end %>
+<%= paginate @sources %>

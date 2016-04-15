@@ -1,0 +1,12 @@
+<h1><%= @source.name %> Quotes</h1>
+<br />
+
+<div class="row">
+  <div class="small-9 small-centered columns">
+    <% @source.quotes.each do |quote| %>
+      <%= quote.body.html_safe %>
+      <br>
+    <% end %>
+    <hr>
+  </div>
+</div>

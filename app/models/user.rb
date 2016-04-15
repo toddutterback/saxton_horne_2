@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :quotes
+
   def is_admin?
-    raise NotImplementedError
+    self.admin
   end
 end
